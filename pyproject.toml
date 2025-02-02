@@ -1,0 +1,14 @@
+[project]
+name = "talk-lessons-open-source"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib<3.6",
+    "poliastro>=0.17.0",
+]
+
+[dependency-groups]
+dev = [
+    "marimo>=0.10.19",
+]
