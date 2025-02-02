@@ -1,7 +1,7 @@
 import marimo
 
-__generated_with = "0.10.17"
-app = marimo.App(width="medium")
+__generated_with = "0.10.19"
+app = marimo.App(width="medium", layout_file="layouts/slides.slides.json")
 
 
 @app.cell
@@ -30,11 +30,11 @@ def _(mo):
         """
         # Outline
 
-        1. Introduction :galaxy:
-        2. How it all started :little_chicken:
-        3. The Golden Era :heart:
-        4. How it all ended :tomb:
-        5. Lessons :old_man:
+        1. Introduction 🌌
+        2. How it all started 🐤
+        3. The Golden Era ❤️
+        4. How it all ended 🪦
+        5. Lessons 👴
         6. Conclusions/The future/Farewell?
         """
     )
@@ -69,15 +69,94 @@ def _(mo):
         """
         ## The project
 
-        poliastro is a (former) Python library for interactive Astrodynamics
+        poliastro ~~is~~ was a Python library for interactive Astrodynamics
 
-        > The branch of Mechanics that studies...
+        <img src="public/logo-poliastro-text.svg" width="600" />
 
-        - Summary of features
-        - Last ever released version
-        - Demo!
+        **Physics → Mechanics → Celestial Mechanics → Astrodynamics** (aka Orbital Mechanics)
+
+        > A branch of Mechanics (itself a branch of Physics) that studies practical problems regarding the motion of rockets and other human-made objects through space.
+
+        - Pure Python, accelerated with numba
+        - MIT license (permissive) https://github.com/poliastro/poliastro/
+        - Physical units, astronomical scales and more, thanks to Astropy
+        - Conversion between several orbit representations
+        - Analytical and numerical propagation
+        - Cool documentation 🚀 https://docs.poliastro.space/
         """
     )
+    return
+
+
+@app.cell
+def _(mo):
+    import warnings
+
+    from astropy import units as u
+    from astropy.time import Time
+
+    from poliastro.bodies import Earth
+    from poliastro.twobody import Orbit
+
+    mo.show_code()
+    return Earth, Orbit, Time, u, warnings
+
+
+@app.cell
+def _(Earth, Orbit, Time, mo, u):
+    r = [-6045, -3490, 2500] << u.km
+    v = [-3.457, 6.618, 2.533] << u.km / u.s
+
+    orb = Orbit.from_vectors(Earth, r, v, Time.now())
+    mo.show_code(orb)
+    return orb, r, v
+
+
+@app.cell
+def _(mo, orb):
+    mo.show_code(orb.plot(label="Sample orbit"))
+    return
+
+
+@app.cell
+def _(Time, mo):
+    from poliastro.plotting.misc import plot_solar_system
+
+    plotter = plot_solar_system(epoch=Time.now().tdb, outer=False, use_3d=True, interactive=True)
+    mo.show_code(plotter.show())
+    return plot_solar_system, plotter
+
+
+@app.cell
+def _(Earth, mo):
+    from poliastro.bodies import Mars
+    from poliastro.plotting.porkchop import PorkchopPlotter
+    from poliastro.util import time_range
+    import matplotlib.pyplot as plt
+
+    launch_span = time_range("2005-04-30", end="2005-10-07")
+    arrival_span = time_range("2005-11-16", end="2006-12-21")
+
+    _, ax = plt.subplots(figsize=(10, 7))
+
+    porkchop_plot = PorkchopPlotter(Earth, Mars, launch_span, arrival_span, ax=ax)
+    porkchop_plot.porkchop()
+    mo.show_code(ax)
+    return (
+        Mars,
+        PorkchopPlotter,
+        arrival_span,
+        ax,
+        launch_span,
+        plt,
+        porkchop_plot,
+        time_range,
+    )
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""...and much more! https://docs.poliastro.space/en/stable/gallery.html""")
     return
 
 
