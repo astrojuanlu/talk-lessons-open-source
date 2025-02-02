@@ -166,11 +166,9 @@ def _(mo):
         r"""
         # How it all started
 
-        (Do I have the Venus report somewhere? That would be fun to show)
+        A beautiful mess of Python, Fortran, and GNU Octave scripts... And it worked!
 
-        (Or maybe the email from my Italian friend giving up, maybe in `juanlu001@gmail.com`)
-
-        (And also at some point Vallado's screenshot, so that I can share the last one again)
+        ![poliastro first commit](public/poliastro-first-commit.png)
         """
     )
     return
@@ -180,10 +178,11 @@ def _(mo):
 def _(mo):
     mo.md(
         r"""
-        - First, basically a collection of scripts
-        - poliastro 0.1, yay it's a library! (works on my machine)
-        - poliastro 0.2, ?
-        - ...
+        - **0.1** _(2013)_, dropped Octave, just Python + Fortran!
+        - **0.2** _(2014)_, refactored API inspired by Helge Eichhorn's project called Plyades
+        - **0.3** _(2015)_, replaced Fortran with Numba, became a pure Python package!
+
+        Cano Rodríguez, J. L. , Eichhorn, H., & McLean, F. (2016). Poliastro: an astrodynamics library written in Python with Fortran performance. In 6th International Conference on Astrodynamics Tools and Techniques. https://indico.esa.int/event/111/contributions/393/
         """
     )
     return
@@ -226,9 +225,9 @@ def _(mo):
 def _(mo):
     mo.md(
         r"""
-        Fun fact, we actually tried to coordinate! `OpenAstrodynamics`
+        Fun fact, we actually tried to coordinate! https://github.com/OpenAstrodynamics
 
-        But the  effort died almost the first week because the 3 of us couldn't agree on one thing I don't remember.
+        But the effort mostly died off almost the first week because the 3 of us couldn't agree on one thing I don't remember.
 
         Collaboration, cooperation, coordination are hard because they're human problems ("I/O-bound") and not technical problems ("CPU-bound").
         """
@@ -242,14 +241,34 @@ def _(mo):
         """
         # The Golden Era
 
-        - 1x Summer of Code in Space, 4x Google Summer of Code (~10 k€ for students)
-        - NNN releases
-        - Became NumFOCUS-affiliated
-        - ...
+        - 1x Summer of Code in Space, 5x Google Summer of Code (~3k€ each year for students)
+        - Became NumFOCUS-affiliated, received 2x Small Development Grants
+        - Worked as Astropy core developer for 6 months (`astropy.coordinates` and `astropy.units`)
+        - Collaborated with the Libre Space Foundation
+        - Presented at EuroPython 2016, Open Source Cubesat Workshop 2017, EuroSciPy 2019, SciPy US 2022
+        - Had lots of fun
 
-        (Not the part you came to learn about :wink:)
+        ![Juanlu at ESA](public/juanlu_esa.jpg)
         """
     )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        """
+        Jorge, GSOC 2019 student, became a maintainer and a friend ❤️
+
+        ![Juanlu and Jorge at OSCW 2019 in Athens](public/juanlu-jorge-oscw19.jpg)
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""And now, for the sad part...""")
     return
 
 
