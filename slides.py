@@ -419,7 +419,17 @@ def _(mo):
 def _(mo):
     mo.md(
         r"""
-        Open source is, above all, a labor of love
+        Despite the sad ending, was it all worth it?
+
+        **Yes ❤️‍🔥**
+
+        It was quite a ride. I learned a ton. I made new friends. I traveled around the world. And I gave back to the community.
+
+        Not many people have the privilege to even devote time to creating open source. I feel truly fortunate of having done this.
+
+        The old needs to give way to the new.
+
+        Open source is, above all, a labor of love!
 
         <img src="public/to-the-moon-and-back.png" width=600 />
         """
@@ -431,16 +441,6 @@ def _(mo):
 def _(mo):
     mo.md(
         """
-        Despite the sad ending, was it all worth it?
-
-        **Yes ❤️‍🔥**
-
-        It was quite a ride. I learned a ton. I made new friends. I traveled around the world. And I gave back to the community.
-
-        Not many people have the privilege to even devote time to creating open source. I feel truly fortunate of having done this.
-
-        The old needs to give way to the new.
-
         To be continued?
 
         Thank you, gracias, grazie!
@@ -448,6 +448,10 @@ def _(mo):
         <hello@juanlu.space>
 
         2025-02-04 @ PyData Prague
+
+        https://www.linkedin.com/in/juanluiscanor/
+
+        ![LinkedIn QR code](public/li-qr.png)
         """
     )
     return
