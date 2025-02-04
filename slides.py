@@ -290,34 +290,13 @@ def _(mo):
 @app.cell
 def _(mo):
     mo.md(
-        r"""
-        _Brainstorming of factors_ before I describe them in detail:
+        """
+        ## Stuck in a local optimum
 
-        - Stopped using it (no more fun)
-        - Technical barriers became trickier, focus time was needed (no more "easy")
-            - API design is actually hard
-            - ~~Some abstractions were difficult to evolve~~
-                - Too generic?
-            - ~~Generalising Earth capabilities created tension~~
-                - Too niche perhaps
-            - Saturated what the dependencies could do, and ad-hoc solutions were needed, which required time
-                - numba couldn't be any faster, code became too Fortran-esque
-                - astropy.units and astropy.coordinates were too slow
-                - small NumPy arrays weren't the right choice for some tasks
-            - How could I get that focus time? By getting paid, but only my students were getting paid, remember?
-            - If only some companies were using it...
-        - "Companies don't want to give back!" (no more rewarding)
-            - The anecdote with Spire
-            - So for the first time I felt resentment! It was very irrational, but also very real
-        - The space industry basically became shit, I quit in early 2021 (no more fulfilling)
-            - Elon Musk
-            - But also... social impact was a lie https://joemorrison.substack.com/p/a-simple-mental-model-for-understanding
-
-        All of it is in https://www.poliastro.space/blog/2022/12/21/juan-luis-steps-down/ (which can be presented later)
-
-        (Be careful because this part can become super boring and detail)
-
-        (Although it would actually be good to establish a parallelism between these 4 motives and the intrinsic/extrinsic motivations at the very beginning)
+        - `astropy.units` was too slow https://github.com/astrojuanlu/fastunits/
+        - `astropy.coordinates` was too complex https://github.com/astrojuanlu/astropy/commit/f7873c5a
+        - `numpy` had too much overhead for small arrays https://github.com/pleiszenburg/bulk_propagate/blob/master/test_notation.ipynb
+        - `numba` prevented writing high level code https://github.com/numba/numba/issues/2952
         """
     )
     return
@@ -325,7 +304,66 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.md("""In the end, stepped down :sad:""")
+    mo.md(
+        """
+        ## "Companies don't want to give back!"
+
+        - **Open source is open source**: Companies don't _have_ to give back
+        - But the minimal currency in open source is a very cheap one: attribution and acknowledgement
+
+        <img src="public/no-testimonial.png" width="600" />
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        """
+        ## Space != Space industry
+
+        In the same way that Music != Music industry
+
+        ![Guy from the record company](public/ray-foster.jpg)
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        """
+        For starters, "The Commercial Satellite Imagery Business Model is Broken" https://joemorrison.substack.com/p/the-commercial-satellite-imagery
+
+        ![Commercial Satellite Imagery Business Model in a picture](public/satellite-imagery-business.png)
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        """
+        And if that wasn't bad enough...
+
+        ![Elon Musk](public/elon-musk.png)
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        """
+        In the end, stepped down :sad:
+
+        https://www.poliastro.space/blog/2022/12/21/juan-luis-steps-down/
+        """
+    )
     return
 
 
@@ -335,9 +373,11 @@ def _(mo):
         """
         # Lessons
 
-        1. Giving back is not, and can never be, a condition for consuming open source, and maintainers have to come to terms with that
+        1. Open source is the most fun way of developing software ❤️
+        2. Giving back is not, and can never be, a condition for consuming open source, and maintainers have to come to terms with that
             - Whoever doesn't like it, should just do something else, or risk burning out!
-        2. Great projects eventually require quality time, which in turn require either money, or personal sacrifice
+        3. Great projects eventually require quality time, which in turn require either money, or personal sacrifice
+            - And personal sacrifice is not sustainable in the long run
         """
     )
     return
