@@ -321,6 +321,22 @@ def _(mo):
 def _(mo):
     mo.md(
         """
+        Instead of whining, it's on _us_ to figure out a business model.
+
+        And, mind you, **open source is a channel, not a business model**!
+
+        Watch Adam Jacob's talk, that's it 👇
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rmhYHzJpkuo?si=0_gS_uordXsoN1xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        """
         ## Space != Space industry
 
         In the same way that Music != Music industry
@@ -359,9 +375,11 @@ def _(mo):
 def _(mo):
     mo.md(
         """
-        In the end, stepped down :sad:
+        In the end, stepped down 😢
 
         https://www.poliastro.space/blog/2022/12/21/juan-luis-steps-down/
+
+        ![Juanlu steps down](public/juanlu-steps-down.png)
         """
     )
     return
@@ -385,23 +403,23 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mo.md("""On the topic of money and open source... Just watch Adam Jacob's talk, that's it""")
-    return
-
-
-@app.cell
-def _(mo):
     mo.md(
         """
-        Despite the sad ending, it was quite a ride. I learned a ton. I made new friends. I traveled around the world. And I gave back to the community.
+        Despite the sad ending, was it all worth it?
 
-        Not many people have the privilege to even devote time to creating open source.
+        **Yes ❤️‍🔥**
 
-        I feel truly fortunate of having done this.
+        It was quite a ride. I learned a ton. I made new friends. I traveled around the world. And I gave back to the community.
 
-        And the old needs to give way to the new.
+        Not many people have the privilege to even devote time to creating open source. I feel truly fortunate of having done this.
 
-        Thank you, gracias, grazie :heart:
+        The old needs to give way to the new.
+
+        Thank you, gracias, grazie!
+
+        <hello@juanlu.space>
+
+        2025-02-04 @ PyData Prague
         """
     )
     return
