@@ -260,7 +260,7 @@ def _(mo):
         """
         Jorge, GSOC 2019 student, became a maintainer and a friend ❤️
 
-        ![Juanlu and Jorge at OSCW 2019 in Athens](public/juanlu-jorge-oscw19.jpg)
+        <img src="public/juanlu-jorge-oscw19.jpg" width=800 alt="Juanlu and Jorge at OSCW 2019 in Athens" />
         """
     )
     return
@@ -353,7 +353,7 @@ def _(mo):
         """
         For starters, "The Commercial Satellite Imagery Business Model is Broken" https://joemorrison.substack.com/p/the-commercial-satellite-imagery
 
-        ![Commercial Satellite Imagery Business Model in a picture](public/satellite-imagery-business.png)
+        <img src="public/satellite-imagery-business.png" width=800 alt="Commercial Satellite Imagery Business Model in a picture" />
         """
     )
     return
@@ -391,10 +391,12 @@ def _(mo):
         """
         # Lessons
 
-        1. Open source is the most fun way of developing software ❤️
-        2. Giving back is not, and can never be, a condition for consuming open source, and maintainers have to come to terms with that
-            - Whoever doesn't like it, should just do something else, or risk burning out!
-        3. Great projects eventually require quality time, which in turn require either money, or personal sacrifice
+        1. Open source is the most awesome way of developing software ❤️
+        2. If you are doing it for fun, ensure it stays fun!
+            - And the moment it's not, it's okay to let go
+        3. Giving back is not, and can never be, a condition for consuming open source, and maintainers have to come to terms with that
+            - Whoever doesn't like it, should figure out a business model, do something else, or risk burning out!
+        4. Great projects eventually require quality time, which in turn require either money, or personal sacrifice
             - And personal sacrifice is not sustainable in the long run
         """
     )
