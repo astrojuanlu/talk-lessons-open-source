@@ -388,6 +388,18 @@ def _(mo):
 @app.cell
 def _(mo):
     mo.md(
+        r"""
+        Jorge gave a talk about this at SciPy US 2023, and later he stepped down himself.
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9u7mrsw2tk?si=4V0s-otqJJ962ghv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
         """
         # Lessons
 
@@ -406,6 +418,18 @@ def _(mo):
 @app.cell
 def _(mo):
     mo.md(
+        r"""
+        Open source is, above all, a labor of love
+
+        <img src="public/to-the-moon-and-back.png" width=600 />
+        """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
         """
         Despite the sad ending, was it all worth it?
 
@@ -416,6 +440,8 @@ def _(mo):
         Not many people have the privilege to even devote time to creating open source. I feel truly fortunate of having done this.
 
         The old needs to give way to the new.
+
+        To be continued?
 
         Thank you, gracias, grazie!
 
